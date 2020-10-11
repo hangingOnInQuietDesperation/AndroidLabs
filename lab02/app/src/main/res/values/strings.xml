@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RGU Weather</string>
+    <string name="btn_get_forecast">Get forecast</string>
+    <string name="tbBookmarkOff">Not Bookmarked</string>
+    <string name="tbBookmarkOn">Bookmarked</string>
+
+    <!-- for display -->
+    <string name="actvLocationHint">Enter your Location</string>
+    <string name="tvHeaderText">%1s forecast for %2s</string>
+    <string name ="tvMinTemp">Minimum</string>
+    <string name ="tvMaxTemp">Maximum</string>
+    <string name="tvMinTempValue">%1$d \u00B0 C</string>
+    <string name="tvMaxTempValue">%1$d \u00B0 C</string>
+    <string name="icon">icon for the weather</string>
+    <string name="tvFuture">Slide into the future (up to 10 days)</string>
+
+
+    <!-- for the RandomWeatherForecastGetter -->
+    <string name="weather_sun">sunny</string>
+    <string name="weather_rain">rain</string>
+    <string name="weather_snow">snow</string>
+    <string name="weather_windy">windy</string>
+
+
+</resources>

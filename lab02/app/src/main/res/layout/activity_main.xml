@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvMaxTemp"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tvMaxTemp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMinTemp"
+        app:layout_constraintStart_toStartOf="@+id/tvMinTemp"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinTemp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actvLocation"
+        android:layout_width="354dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/actvLocationHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_get_forecast"
+        android:layout_width="178dp"
+        android:layout_height="65dp"
+        android:text="@string/btn_get_forecast"
+        app:layout_constraintStart_toStartOf="@+id/actvLocation"
+        app:layout_constraintTop_toBottomOf="@+id/actvLocation" />
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="402dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_forecast"
+        tools:text="Aberdeen Forecast" />
+
+    <TextView
+        android:id="@+id/tvMinTemp"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/tvMinTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <TextView
+        android:id="@+id/tvMaxTempValue"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:text="@string/tvMaxTempValue"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMaxTemp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMinTempValue"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvMinTempValue"
+        app:layout_constraintTop_toTopOf="@+id/tvMaxTemp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMinTempValue"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:text="@string/tvMinTempValue"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMinTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvMinTemp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvForecastValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivWeather"
+        app:layout_constraintEnd_toEndOf="@+id/ivWeather"
+        app:layout_constraintStart_toStartOf="@+id/ivWeather"
+        tools:text="weather icon" />
+
+    <ImageView
+        android:id="@+id/ivWeather"
+        android:layout_width="194dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMaxTempValue"
+        app:srcCompat="@drawable/sun" />
+
+    <ToggleButton
+        android:id="@+id/tbBookmark"
+        android:layout_width="176dp"
+        android:layout_height="65dp"
+        android:textOff="@string/tbBookmarkOff"
+        android:textOn="@string/tbBookmarkOn"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_get_forecast"
+        app:layout_constraintEnd_toEndOf="@+id/actvLocation"
+        app:layout_constraintTop_toBottomOf="@+id/actvLocation" />
+
+    <SeekBar
+        android:id="@+id/sbFuture"
+        android:layout_width="403dp"
+        android:layout_height="84dp"
+        android:max="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFuture"
+        android:layout_width="372dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/tvFuture"
+        app:layout_constraintBottom_toTopOf="@+id/sbFuture"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
